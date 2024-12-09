@@ -21,7 +21,7 @@ const Tasks = () => {
     useEffect(() => {
         const getTasks = async () => {
             try {
-                const res = await axios.get('https://task-management-server-rho-ten.vercel.app/api/tasks/all', {
+                const res = await axios.get('https://magnet-brains-task-management.onrender.com/api/tasks/all', {
                     headers: {
                         Authorization: token,
                     }

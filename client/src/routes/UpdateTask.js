@@ -21,7 +21,7 @@ const UpdateTask = () => {
     const token = user.token;
 
     useEffect(() => {
-        axios.get(`https://task-management-server-rho-ten.vercel.app/api/tasks/${id}`, {
+        axios.get(`https://magnet-brains-task-management.onrender.com/api/tasks/${id}`, {
             headers: {
                 Authorization: token,
             }
@@ -57,7 +57,7 @@ const UpdateTask = () => {
     const handleUpdateTask = async (e, id) => {
         e.preventDefault();
         try {
-            const res = await axios.put(`https://task-management-server-rho-ten.vercel.app/api/tasks/update/${id}`,
+            const res = await axios.put(`https://magnet-brains-task-management.onrender.com/api/tasks/update/${id}`,
                 { name, description, dueDate, priorityLevel },
                 {
                     headers: {
@@ -96,11 +96,52 @@ const UpdateTask = () => {
                 <label>Due date</label>
                 <input type="date" value={dueDate} onChange={e => setdueDate(e.target.value)} />
             </div>
-            <div className="input">
-                <label>Priority Level</label>
-                <input type="text" placeholder='Specify a priority level for this task' value={priorityLevel} onChange={e => setPriorityLevel(e.target.value)} />
-                <small>Your value must be either of low, medium or high</small>
-            </div>
+            <div
+        className="select"
+        style={{
+          marginBottom: "15px",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <label
+          style={{
+            fontWeight: "bold",
+            marginBottom: "5px",
+            color: "#333",
+          }}
+        >
+          Priority Level
+        </label>
+
+        <select
+          value={priorityLevel}
+          onChange={(e) => setPriorityLevel(e.target.value)}
+          style={{
+            padding: "8px 12px",
+            fontSize: "12px",
+            border: "1px solid #000",
+            borderRadius: "7px",
+            background: "#f9f9f9",
+            color: "#333",
+            outline: "none",
+            transition: "all 0.3s ease",
+          }}
+        >
+          <option value="" disabled>
+            Select priority level
+          </option>
+          <option value="low" style={{ color: "#28a800" }}>
+            Low
+          </option>
+          <option value="medium" style={{ color: "#ffc107" }}>
+            Medium
+          </option>
+          <option value="high" style={{ color: "#dc3545" }}>
+            High
+          </option>
+        </select>
+      </div>
             <button>Update Task</button>
         </form>
     );

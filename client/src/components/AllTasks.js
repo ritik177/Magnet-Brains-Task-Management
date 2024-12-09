@@ -29,7 +29,7 @@ const AllTasks = ({ tasks }) => {
     const handleUpdateTask = (taskId) => navigate(`update/${taskId}`);
 
     const handleDeleteTask = async taskId => {
-        await axios.delete(`https://task-management-server-rho-ten.vercel.app/api/tasks/delete/${taskId}`, {
+        await axios.delete(`https://magnet-brains-task-management.onrender.com/api/tasks/delete/${taskId}`, {
             headers: {
                 Authorization: token,
             },

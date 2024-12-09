@@ -20,7 +20,7 @@ const EditProfile = () => {
     const token = user.token;
 
     useEffect(() => {
-        axios.get('https://task-management-server-rho-ten.vercel.app/api/user/me', {
+        axios.get('https://magnet-brains-task-management.onrender.com/api/user/me', {
             headers: {
                 Authorization: token
             }
@@ -45,7 +45,7 @@ const EditProfile = () => {
     const handleEditProfile = async e => {
         e.preventDefault();
 
-        await axios.put(`https://task-management-server-rho-ten.vercel.app/api/user/me/edit/${id}`,
+        await axios.put(`https://magnet-brains-task-management.onrender.com/api/user/me/edit/${id}`,
             { username, email },
             {
             headers: {

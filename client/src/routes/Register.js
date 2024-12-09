@@ -23,7 +23,7 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
 
-        axios.post('https://task-management-server-rho-ten.vercel.app/api/user/register', { username, email, password })
+        axios.post('https://magnet-brains-task-management.onrender.com/api/user/register', { username, email, password })
             .then(res => {
                 console.log(res);
                 setError('');

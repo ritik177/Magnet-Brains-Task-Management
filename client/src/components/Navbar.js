@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaBars, FaHome, FaSignInAlt, FaSignOutAlt, FaTasks, FaUser, FaUserPlus } from 'react-icons/fa';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpeg';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
         <nav>
             <div className="logo">
                 <img src={logo} alt="Ofto Task Manager" />
-                <label>OTM</label>
+                <label>Magnet-Brains</label>
             </div>
             <div>
                 <ul className={toggleMenu ? 'show' : 'hide'}>

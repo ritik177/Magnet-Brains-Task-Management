@@ -19,7 +19,7 @@ const User = ({ profile }) => {
     const token = user.token;
 
     const handleDeleteProfile = async userId => {
-        await axios.delete(`https://task-management-server-rho-ten.vercel.app/api/user/me/delete/${userId}`, {
+        await axios.delete(`https://magnet-brains-task-management.onrender.com/api/user/me/delete/${userId}`, {
             headers: {
                 Authorization: token,
             },

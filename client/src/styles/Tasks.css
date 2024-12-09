@@ -206,6 +206,54 @@
     animation: load 1s linear infinite;
     animation-delay: calc(var(--i) * 0.1s);
 }
+/* Select Container */
+.add-task .select, .update-task .select {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Select Label */
+.add-task .select label, .update-task .select label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Select Dropdown */
+.add-task .select select, .update-task .select select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    background: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hover and Focus Effects */
+.add-task .select select:hover, .update-task .select select:focus {
+    border-color: #007bff;
+    background: #fff;
+}
+
+/* Priority Option Colors */
+.add-task .select option[value="low"],
+.update-task .select option[value="low"] {
+    color: #28a745; /* Green */
+}
+
+.add-task .select option[value="medium"],
+.update-task .select option[value="medium"] {
+    color: #ffc107; /* Yellow */
+}
+
+.add-task .select option[value="high"],
+.update-task .select option[value="high"] {
+    color: #dc3545; /* Red */
+}
+
 
 @keyframes load {
     0% {

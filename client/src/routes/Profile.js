@@ -19,7 +19,7 @@ const Profile = () => {
     useEffect(() => {
         const userProfile = async () => {
             try {
-                const res = await axios.get('https://task-management-server-rho-ten.vercel.app/api/user/me', {
+                const res = await axios.get('https://magnet-brains-task-management.onrender.com/api/user/me', {
                     headers: {
                         Authorization: token,
                     }
